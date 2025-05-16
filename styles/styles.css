@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 @font-face {
     font-family: 'Andreas';
     src: url(/fonts/andreas-cufonfonts/Andreas.ttf);
@@ -36,6 +39,7 @@ h1{
     font-family: 'Andreas';
     font-size: 2rem;
 }
+
 section{
     position: relative;
     width: 100%;
@@ -251,6 +255,10 @@ width: 500px;
     line-height: 1.5;
     margin: 20px auto;
 }
+#contact{
+    display: grid;
+    place-items: center;
+}
 #contact form{
     display: flex;
     flex-direction: column;
@@ -263,7 +271,7 @@ width: 500px;
     padding: 1rem;
     font-size: 1.2rem;
     border-radius: 30px;
-    border: 0;
+    border: 1px solid black;
     position: relative;
 }
 #contact button{
@@ -277,6 +285,7 @@ width: 500px;
     font-family: 'Nunito sans',sans-serif;
 }
 .contact-holder{
+    margin-top:50px;
     width: 75%;
     margin: auto;
     position: relative;
