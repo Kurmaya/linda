@@ -5,13 +5,14 @@
 }
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 @font-face {
     font-family: 'Andreas';
     src: url(../fonts/andreas-cufonfonts/Andreas.ttf);
 }
 body{
-    
+    overflow-x: hidden;
     font-family: 'Nunito sans',sans-serif;
     /* background-position: center -300px; */
     position: relative;
@@ -317,4 +318,98 @@ footer{
     position: relative;
     display: grid;
     place-items: center;
+}
+@media screen and (min-width:280px) and (max-width:500px) {
+    section{
+        min-height: 100vh;
+        height: auto;
+        padding: 0 10px;
+    }
+    .logo{
+        position: relative;
+        top:40px;
+width: 90%;
+    }
+    .hero-image-holder{
+        width: 85%;
+        height: 90vh;
+        border-radius: 0 0 160px 160px;
+    }
+    .flower-left,.flower-right{
+        width: 150px;
+        height: 50%;
+    }
+    .flower-left{
+        left:-25%!important;
+    }
+    .flower-right{
+        top:-18%!important;
+        right: -25%;
+    }
+    #hero h1{
+        font-size: 1.5rem;
+        width: 85%;
+        top:80px;
+    }
+.about-holder{
+    flex-direction: column;
+    padding: 10px;
+}
+.about-holder img{
+    width: 225px;
+    height: 225px;
+}
+.about-wrapper,.contact-holder{
+    height: auto;
+    width: 90%;
+}
+.about-wrapper p{
+    width: auto;
+}
+#contact input{
+    width: 200px;
+}
+#contact button{
+    width: 200px;
+}
+#hero form{
+    width:250px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    gap:20px;
+}
+#hero input{
+    width: 180px;
+    font-size: 1rem;
+    border-radius: 30px;
+    padding:.6rem;
+}
+#hero form button{
+    width: 180px;
+    border-radius: 30px;
+    padding: .6rem;
+}
+#hero h3{
+    font-size: .9rem;
+}
+.subscribe-holder{
+    width: 85%;
+    height: 33%;
+}
+.desc{
+    width: 100%;
+}
+#contact{
+    margin:50px auto auto auto;
+}
+h2{
+    margin:20px auto;
+}
+#subscribe h3 , #contact h3{
+    font-size: 1.2rem;
+    width: 100%;
+}
 }
