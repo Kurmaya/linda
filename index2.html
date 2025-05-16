@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Groovy 70's</title>
+  <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Gloria Hallelujah', cursive;
+      background: #fbeec1;
+      color: #3d2b1f;
+    }
+
+    nav {
+      background: #ff6f61;
+      padding: 15px 0;
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #fff8dc;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 120px 20px 60px;
+      text-align: center;
+    }
+
+    h1, h2 {
+      font-family: 'Monoton', cursive;
+      color: #ff6f61;
+      text-shadow: 1px 1px #fffacd;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    #home {
+      background: radial-gradient(circle, #fdd365, #f7955a, #ff6f61);
+      color: #fff;
+    }
+
+    #about {
+      background: linear-gradient(135deg, #ffdab9, #ffe4b5, #fffacd);
+    }
+
+    #gallery {
+      background-color: #ffd700;
+      color: #3d2b1f;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      border: 5px solid #ff6f61;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-grid img:hover {
+      transform: rotate(-5deg) scale(1.05);
+    }
+
+    #contact {
+      background: #fa8072;
+      color: #fff;
+    }
+
+    form {
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+    }
+
+    input, textarea {
+      padding: 10px;
+      width: 80%;
+      max-width: 500px;
+      border: none;
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 1rem;
+    }
+
+    button {
+      background: #fff8dc;
+      color: #3d2b1f;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 20px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #fffacd;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #3d2b1f;
+      color: #fff8dc;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="home">
+    <h1>Welcome to the 70s</h1>
+    <p>Peace, love, and platform shoes. Let’s boogie into a blast from the past.</p>
+  </section>
+
+  <section id="about">
+    <h2>About the 70s</h2>
+    <p>The 1970s were all about disco, bell bottoms, vinyl records, and groovy vibes. A time of cultural revolution and creative expression through music, fashion, and art.</p>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/1970s_Fashion.jpg" alt="70s Fashion">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Disco_ball.svg" alt="Disco Ball">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Peace_symbol.svg" alt="Peace Symbol">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Vinyl_record.svg" alt="Vinyl Record">
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Stay Groovy</h2>
+    <form onsubmit="submitForm(event)">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2025 Groovy 70s | Keep on truckin’ ✌️
+  </footer>
+
+  <script>
+    function submitForm(e) {
+      e.preventDefault();
+      alert("🕺 Your message is spinning on the record!");
+    }
+  </script>
+</body>
+</html>
