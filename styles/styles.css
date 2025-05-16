@@ -8,7 +8,7 @@ html{
 }
 @font-face {
     font-family: 'Andreas';
-    src: url(/fonts/andreas-cufonfonts/Andreas.ttf);
+    src: url(../fonts/andreas-cufonfonts/Andreas.ttf);
 }
 body{
     
@@ -30,7 +30,7 @@ body{
     width: 100%;
     height: 100%;
     content: "";
-    background-image: url('/assets/images/background.svg');
+    background-image: url('../assets/images/background.svg');
     background-size: cover!important;
     filter: grayscale(.1);
     /* z-index: 10; */
