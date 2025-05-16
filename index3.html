@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Psychedelic Vibes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: black;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 20px;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: #f0f;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #0ff;
+      transform: scale(1.1);
+    }
+
+    section {
+      min-height: 100vh;
+      padding: 100px 20px 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    #home {
+      background: radial-gradient(circle at center, #ff00cc, #3333ff, #000000);
+      font-family: 'Monoton', cursive;
+    }
+
+    #home h1 {
+      font-size: 4rem;
+      color: #fff;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 10px #f0f, 0 0 20px #0ff;
+      }
+      to {
+        text-shadow: 0 0 20px #ff0, 0 0 30px #0f0;
+      }
+    }
+
+    #about {
+      background: linear-gradient(45deg, #ff6ec4, #7873f5, #2af598, #ffe985);
+      background-size: 600% 600%;
+      animation: gradient 12s ease infinite;
+      color: #000;
+    }
+
+    @keyframes gradient {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    #gallery {
+      background: #111;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle, #0ff, #f0f);
+      opacity: 0.4;
+      animation: floatCircle 20s linear infinite;
+    }
+
+    .circle:nth-child(1) {
+      width: 200px;
+      height: 200px;
+      top: 20%;
+      left: 10%;
+    }
+
+    .circle:nth-child(2) {
+      width: 300px;
+      height: 300px;
+      bottom: 10%;
+      right: 20%;
+    }
+
+    @keyframes floatCircle {
+      from {
+        transform: rotate(0deg) translateY(0);
+      }
+      to {
+        transform: rotate(360deg) translateY(-20px);
+      }
+    }
+
+    #contact {
+      background: linear-gradient(to bottom, #333, #000);
+      color: #fff;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 90%;
+      max-width: 500px;
+    }
+
+    input, textarea {
+      padding: 10px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+
+    button {
+      background: #ff00cc;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1.1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #00ccff;
+    }
+
+    footer {
+      background: #000;
+      color: #888;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      #home h1 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="home">
+    <h1>Psychedelic Vibes</h1>
+    <p>Ride the waves of color and sound through your mind's eye 🌈</p>
+  </section>
+
+  <section id="about">
+    <h2>About the Trip</h2>
+    <p>Welcome to the realm of neon dreams, tie-dye thoughts, and eternal echoes of the universe. This page is a tribute to the vivid freedom of psychedelic expression.</p>
+  </section>
+
+  <section id="gallery">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <h2>Gallery</h2>
+    <p>Visualize your aura through shape and color.</p>
+    <p>✨ 👁️ 🌀 ☯️ 🔮</p>
+  </section>
+
+  <section id="contact">
+    <h2>Connect with the Universe</h2>
+    <form onsubmit="sendForm(event)">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="4" placeholder="Your Message to the cosmos..." required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2025 Psychedelic Vibes | Made with cosmic love ✨
+  </footer>
+
+  <script>
+    function sendForm(e) {
+      e.preventDefault();
+      alert("🌟 Your message has been sent through the astral plane!");
+    }
+  </script>
+</body>
+</html>
